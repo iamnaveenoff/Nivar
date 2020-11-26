@@ -9,7 +9,7 @@ import {catchError, retry} from 'rxjs/operators';
 export class WeatherApiService {
 
     // Using City Name
-    private openWeatherApi = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=4dddf97e6f90b62bc10e2131897f15cc';
+    private openWeatherApi = 'http://api.openweathermap.org/data/2.5/weather?q=chennai&appid=4dddf97e6f90b62bc10e2131897f15cc';
     private apiKey = '4dddf97e6f90b62bc10e2131897f15cc';
 
     constructor(private http: HttpClient) {

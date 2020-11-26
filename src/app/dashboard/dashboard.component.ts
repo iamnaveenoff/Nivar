@@ -83,6 +83,7 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit() {
         if (navigator.geolocation) {
+            // window.alert('geolocation Working');
             navigator.geolocation.getCurrentPosition((position) => {
                 this.longitude = position.coords.longitude;
                 this.latitude = position.coords.latitude;
@@ -99,10 +100,10 @@ export class DashboardComponent implements OnInit {
                     this.weatherMain = this.weatherData.weather[0].main;
                     this.weatherDesc = this.weatherData.weather[0].description;
                 });
-
             });
         } else {
-            console.log('No support for geolocation')
+            console.log('No support for geolocation');
+            window.alert('No support for geolocation');
         }
 
         /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
